@@ -1,26 +1,25 @@
 import React, { Component } from "react";
 import { AppRegistry, StyleSheet, Text, View, Button } from "react-native";
-import { StackNavigator } from "react-navigation";
+import { DrawerNavigator } from "react-navigation";
 import Login from "../components/Login";
 import Register from "../components/Register";
 
 class MainScreen extends Component {
   static navigationOptions = {
-    title: "Welcome"
+    drawerLabel: "Welcome"
   };
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to HouseMoneyMobile!</Text>
-        <Button onPress={() => navigate("Login")} title="Login" />
-        <Button onPress={() => navigate("Register")} title="Register" />
+        <Button onPress={() => navigate("DrawerOpen")} title="Drawer" />
       </View>
     );
   }
 }
 
-const HomeScreen = StackNavigator({
+const HomeScreen = DrawerNavigator({
   Home: { screen: MainScreen },
   Login: { screen: Login },
   Register: { screen: Register }

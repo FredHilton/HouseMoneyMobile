@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { AppRegistry, StyleSheet, Text, View } from "react-native";
-import { StackNavigator } from "react-navigation";
+import { DrawerNavigator } from "react-navigation";
 import { connect } from "react-redux";
 
 export default class Login extends Component {
   static navigationOptions = {
-    title: "Login"
+    drawerLabel: "Login"
   };
   render() {
     return (
