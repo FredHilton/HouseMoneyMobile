@@ -4,9 +4,9 @@ import { DrawerNavigator } from "react-navigation";
 import Login from "../components/Login";
 import Register from "../components/Register";
 
-class MainScreen extends Component {
+export class MainScreen extends Component {
   static navigationOptions = {
-    drawerLabel: "Welcome"
+    drawerLabel: "Home"
   };
   render() {
     const { navigate } = this.props.navigation;
@@ -19,12 +19,13 @@ class MainScreen extends Component {
   }
 }
 
-const HomeScreen = DrawerNavigator({
+const DrawerMenu = DrawerNavigator({
   Home: { screen: MainScreen },
   Login: { screen: Login },
   Register: { screen: Register }
 });
-export default HomeScreen;
+
+export default DrawerMenu;
 
 const styles = StyleSheet.create({
   container: {

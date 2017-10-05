@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { AppRegistry, StyleSheet, Text, View } from "react-native";
+import { AppRegistry, StyleSheet, Text, View, Button } from "react-native";
 import { DrawerNavigator } from "react-navigation";
+import { MainScreen } from "../../main/App.js";
+import Register from "../Register";
 import { connect } from "react-redux";
 
 export default class Login extends Component {
@@ -8,10 +10,12 @@ export default class Login extends Component {
     drawerLabel: "Login"
   };
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>There was a Login screen here</Text>
         <Text style={styles.instructions}>It's gone now</Text>
+        <Button onPress={() => navigate("DrawerOpen")} title="Drawer" />
       </View>
     );
   }
