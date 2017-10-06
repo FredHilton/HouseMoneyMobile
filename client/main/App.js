@@ -3,6 +3,8 @@ import { AppRegistry, StyleSheet, Text, View, Button } from "react-native";
 import { DrawerNavigator } from "react-navigation";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import Nav from "../components/Nav";
+import styles from "./Style";
 
 export class MainScreen extends Component {
   static navigationOptions = {
@@ -19,31 +21,12 @@ export class MainScreen extends Component {
   }
 }
 
-const DrawerMenu = DrawerNavigator({
-  Home: { screen: MainScreen },
-  Login: { screen: Login },
-  Register: { screen: Register }
-});
+// const DrawerMenu = DrawerNavigator({
+//   Home: { screen: MainScreen },
+//   Login: { screen: Login },
+//   Register: { screen: Register }
+// });
 
-export default DrawerMenu;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
-  }
-});
+export default Nav;
 
 AppRegistry.registerComponent("MainScreen", () => MainScreen);
