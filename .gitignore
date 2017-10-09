@@ -2,6 +2,9 @@
 #
 .DS_Store
 
+# artifacts
+artifacts
+
 # dependencies
 Client/node_modules
 Client/package-lock.json

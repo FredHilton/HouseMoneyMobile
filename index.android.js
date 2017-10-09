@@ -4,13 +4,13 @@
  * @flow
  */
 
-import React from "react";
-import { AppRegistry } from "react-native";
+import React from 'react';
+import { AppRegistry } from 'react-native';
 
-import MainScreen from "./client/main/App.js";
+import MainScreen from './client/main/app';
 
 const HouseMoneyMobile = () => {
-  return <MainScreen />;
+    return <MainScreen />;
 };
 
-AppRegistry.registerComponent("HouseMoneyMobile", () => HouseMoneyMobile);
+AppRegistry.registerComponent('HouseMoneyMobile', () => HouseMoneyMobile);
